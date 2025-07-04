@@ -25,3 +25,13 @@ let post = {
     content: "content of the post",
     date: new Date(),
 };
+let blogPost = {
+    title: "this is a blog post",
+    content: "content of the post",
+    date: new Date(),
+    author: Author = {
+        name: "jhon",
+        age: 32,
+        email: "jhon@gmail.com"
+    }
+};

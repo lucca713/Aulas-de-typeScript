@@ -40,14 +40,37 @@ car = []
 
 // nao se usar muito assim, pois se eu tiver 20 objetos vou ter que toda vez escrever os 20? nao enta ofaco uma variavel para isso.
 
+//faco um esqueleto
+
+type Author = {
+    name: string,
+    age: number,
+    email: string,
+}
+
 type Post = {
-    title:  string,
+    title:  string
     content: string,
     date : Date,
+    author: Author,
 }
+
+
 
 let post: Post = {
     title:  "this is a block post",
     content: "content of the post",
     date :  new Date(),
 };
+
+
+let blogPost :Post = {
+    title: "this is a blog post",
+    content: "content of the post",
+    date: new Date(),
+    author: Author ={
+        name:"jhon",
+        age: 32,
+        email: "jhon@gmail.com"
+    }
+}
