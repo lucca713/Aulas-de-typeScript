@@ -48,29 +48,46 @@ type Author = {
     email: string,
 }
 
+type AwardsDatails = {
+     name:string,
+     date: Date,
+}
+
+type Awards = {
+    [key:string]: AwardsDatails 
+}
+
 type Post = {
-    title:  string
+    title: string
     content: string,
     date : Date,
     author: Author,
+    awards?: Awards //quando colocamos o sinal de ? ele se torna uma propriedade opcional, podmeos colocar readOnly para nao ser modificada, apenas lida
 }
 
 
 
-let post: Post = {
-    title:  "this is a block post",
-    content: "content of the post",
-    date :  new Date(),
-};
+
+
 
 
 let blogPost :Post = {
     title: "this is a blog post",
     content: "content of the post",
     date: new Date(),
-    author: Author ={
+    author: {
         name:"jhon",
         age: 32,
         email: "jhon@gmail.com"
+    },
+    awards : {
+        web1:{
+            name: "site 1 é o melhor",
+            date : new Date(),
+        },
+        web2: {
+            name: "site 2 eh o melhor",
+            date: new Date()
+        }
     }
 }
