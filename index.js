@@ -67,4 +67,15 @@ let user = {
     language: "English",
     additionalInfo: "This is an example of an index signature property"
 };
-//fim exercicios
+function logger(states) {
+    switch (states.state) {
+        case "Loading":
+            return "carregando...";
+            break;
+        case "Failed":
+            return `Error${states.code}`;
+            break;
+        case "Success":
+            return `Success ${states.response.title}`;
+    }
+}

@@ -178,4 +178,37 @@ let user : User = {
 
 //fim exercicios
 
+//aula 34 -> Discriminating Unions 
 
+type NetWorkLoadingState = {
+    state: "Loading"
+}
+
+type NetWorkFailedState = {
+    state: "Failed",
+    code : number
+}
+ type NetWorkSuccessState = {
+     state: "Success",
+     response : {
+        title: string,
+        duration: number,
+        summary: string
+     }
+ }
+
+ type NetWorkState = NetWorkLoadingState | NetWorkFailedState | NetWorkSuccessState
+
+
+ function logger (states: NetWorkState){
+    switch(states.state){
+        case"Loading":
+            return "carregando...";
+            break
+        case "Failed":
+            return `Error${states.code}`
+            break
+         case "Success":
+            return `Success ${states.response.title}`   
+    }
+ }
