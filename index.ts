@@ -66,11 +66,6 @@ type Post = {
 }
 
 
-
-
-
-
-
 let blogPost :Post = {
     title: "this is a blog post",
     content: "content of the post",
@@ -91,3 +86,96 @@ let blogPost :Post = {
         }
     }
 }
+
+//uniao de 2 objetos
+
+type Dog = {
+    name: string,
+    barks: boolean,
+    wags: boolean
+}
+
+type Cat = {
+    name: string,
+    purrs: boolean,
+}
+
+type dogOrCat = Dog | Cat //aqui voce garante a uniao dos dois /* faz mais sentido fazer o type animal e juntar em um type dogOrCat mas tudo bem */
+
+
+const dog : dogOrCat = {
+    name : "bobi",
+    barks: true,
+    wags : true,
+}
+
+const cat : dogOrCat = {
+    name : "bella",
+    purrs : true
+}
+
+
+let hybridAnimal : dogOrCat = {
+    name : "bobi",
+    barks: true,
+    wags : true,
+    purrs : true
+}
+
+
+//exercicio Nested Objects
+
+
+type PreferencesDark = {
+    dark: boolean,
+}
+
+type PreferencesWhite = {
+    white : boolean,
+}
+
+type Theme =  PreferencesDark | PreferencesWhite
+
+type AdditionalInfo = {
+    [key: string]: any;
+}  
+
+type Contact = { 
+    email : string,
+    phone? : number,
+}
+
+type User =  {
+    id : number,
+    name : string,
+    age? : number,
+    contact : Contact,
+    theme : Theme,
+    language: "English" | "Spanish",
+
+    AdditionalInfo? : AdditionalInfo,
+    //podia ser feito assim:
+    [key: string]: any;
+}
+
+let user : User = {
+    id : 1,
+    name : "John Doe",
+    
+    contact: {
+        email: "john@example.com"
+    },
+    
+    theme : {
+        dark: true,
+    },
+    
+    language : "English",
+    
+    additionalInfo : "This is an example of an index signature property"
+    
+}
+
+//fim exercicios
+
+

@@ -20,18 +20,51 @@ let newCar = {
     color: "black",
 };
 car = [];
-let post = {
-    title: "this is a block post",
-    content: "content of the post",
-    date: new Date(),
-};
 let blogPost = {
     title: "this is a blog post",
     content: "content of the post",
     date: new Date(),
-    author: Author = {
+    author: {
         name: "jhon",
         age: 32,
         email: "jhon@gmail.com"
+    },
+    awards: {
+        web1: {
+            name: "site 1 é o melhor",
+            date: new Date(),
+        },
+        web2: {
+            name: "site 2 eh o melhor",
+            date: new Date()
+        }
     }
 };
+const dog = {
+    name: "bobi",
+    barks: true,
+    wags: true,
+};
+const cat = {
+    name: "bella",
+    purrs: true
+};
+let hybridAnimal = {
+    name: "bobi",
+    barks: true,
+    wags: true,
+    purrs: true
+};
+let user = {
+    id: 1,
+    name: "John Doe",
+    contact: {
+        email: "john@example.com"
+    },
+    theme: {
+        dark: true,
+    },
+    language: "English",
+    additionalInfo: "This is an example of an index signature property"
+};
+//fim exercicios
