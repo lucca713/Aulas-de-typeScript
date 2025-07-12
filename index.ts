@@ -212,3 +212,20 @@ type NetWorkFailedState = {
             return `Success ${states.response.title}`   
     }
  }
+
+ let a: number[] = [1,2,3]; //usar mais
+
+ let b : Array <string> = ["a", "b", "c"]; //menos usado
+
+ let c:(string | number | boolean )[] = ["a", 2, true] //usar tambem
+
+
+//truplas (arodem sempre ser a mesma)
+ let Person : [string,string,number] = ["jhon", "doe", 18]
+
+ type Usuarios = [string, string, number, string?]
+
+ let Usuario :Usuarios = ["francisca","isabelle", 18]
+
+ type listPfStudents = [number, boolean, ...string[]] //só pode ter um desse por lista, posso ter quantas string tiver
+ const passingStudents:  listPfStudents = [3,true, "lucca", "ana", "isa"] 

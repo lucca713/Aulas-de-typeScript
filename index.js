@@ -79,3 +79,10 @@ function logger(states) {
             return `Success ${states.response.title}`;
     }
 }
+let a = [1, 2, 3]; //usar mais
+let b = ["a", "b", "c"]; //menos usado
+let c = ["a", 2, true]; //usar tambem
+//truplas (arodem sempre ser a mesma)
+let Person = ["jhon", "doe", 18];
+let Usuario = ["francisca", "isabelle", 18];
+const passingStudents = [3, true, "lucca", "ana", "isa"];
